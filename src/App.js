@@ -1,12 +1,12 @@
 import './App.css';
-import Deck from './components/deck';
+import Set from './components/set';
 import Score from './components/score';
 
 function App() {
   return (
     <>
       <Score/>
-      <Deck/>
+      <Set/>
     </>
   );
 }
