@@ -8,10 +8,17 @@ export default function Score(){
     setCurrent(current+1);
   }
 
+  function updateBest(){
+    if(current>best)
+      setBest(current);
+  }
+
   return(
    <>
     <button onClick={increase}>Increase</button>
+    <button onClick={updateBest}>Update</button>
     <p>Current: {current}</p>
+    <p>Best: {best}</p>
    </>
   ); 
 }
