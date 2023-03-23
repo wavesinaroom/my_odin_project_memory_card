@@ -1,12 +1,12 @@
 import './App.css';
-import Card from './components/card';
+import Deck from './components/deck';
 import Score from './components/score';
 
 function App() {
   return (
     <>
       <Score/>
-      <Card name="James" pic="A pic"/>
+      <Deck/>
     </>
   );
 }
