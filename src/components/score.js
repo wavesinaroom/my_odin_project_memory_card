@@ -13,10 +13,16 @@ export default function Score(){
       setBest(current);
   }
 
+  function reset(){
+    setBest(0);
+    setCurrent(0);
+  }
+
   return(
    <>
     <button onClick={increase}>Increase</button>
     <button onClick={updateBest}>Update</button>
+    <button onClick={reset}>Reset</button>
     <p>Current: {current}</p>
     <p>Best: {best}</p>
    </>
