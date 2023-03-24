@@ -7,6 +7,7 @@ function App() {
   const [clicked, setClicked] = useState(Array(5));
 
   function checkClicked(id){
+    alert(id)
     if(clicked[4]){
       //Reset clickec - current score - best score
     }else{
@@ -22,7 +23,7 @@ function App() {
   return (
     <>
       <Score/>
-      <Set/>
+      <Set action={checkClicked}/>
     </>
   );
 }

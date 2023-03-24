@@ -2,7 +2,7 @@ import {useState} from "react";
 import uniqid from "uniqid";
 import Card from "./card";
 
-export default function Set(){
+export default function Set(props){
   const[cards,setCards] = useState([<Card key={uniqid()} name="John" pic="1"/>,
                                     <Card key={uniqid()} name="Al" pic="2"/>,
                                     <Card key={uniqid()} name="Paul" pic="3"/>,
@@ -10,6 +10,7 @@ export default function Set(){
                                     <Card key={uniqid()} name="Lou" pic="5"/>,]);
 
   function shuffle(){
+    props.action('laksdjf');
     const shuffled = Array(5);
     let random;
     cards.forEach(card=>{
