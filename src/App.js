@@ -4,21 +4,24 @@ import Score from './components/score';
 import {useState} from 'react';
 
 function App() {
-  const [clicked, setClicked] = useState(Array(5));
+  let clicked = []
 
-  function checkClicked(id){
-    alert(id)
+  function checkClicked(name){
+    alert(`Calling ${name} from app.js`)
     if(clicked[4]){
-      //Reset clickec - current score - best score
+
+      //Reset clicked - current score - best score
     }else{
-      if(clicked.find(click => click === id)){
+      if(clicked.find(click => click === name)){
         //Reset current score
+        alert('Found')
       }
       else{
         //Update clicked - Check best - increase current
+        clicked.push(name)    
       }
     }
-
+    alert(clicked);
   }
   return (
     <>
