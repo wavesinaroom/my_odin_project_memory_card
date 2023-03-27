@@ -1,13 +1,14 @@
 import {useState} from "react";
 import uniqid from "uniqid";
-import Card from "./card";
 
 export default function Set(props){
-  const[cards,setCards] = useState([<Card key={uniqid()} onClick={handleAction} name="John" pic="1"/>,
-                                    <Card key={uniqid()} onClick={handleAction} name="Al" pic="2"/>,
-                                    <Card key={uniqid()} onClick={handleAction} name="Paul" pic="3"/>,
-                                    <Card key={uniqid()} onClick={handleAction} name="James" pic="4"/>,
-                                    <Card key={uniqid()} onClick={handleAction} name="Lou" pic="5"/>,]);
+
+  const [cards,setCards] = useState([{name:`Joe`, pic:`1`},
+                            {name:`Luke`, pic:`2`},
+                            {name:`Bob`, pic:`3`},
+                            {name:`James`,pic:`4`},
+                            {name:`Lou`,pic:`5`}
+  ]);
 
   function handleAction(name){
     props.action(name);
@@ -30,8 +31,26 @@ export default function Set(props){
   }
   return(
     <>
-      <button onClick={()=>shuffle()}>Shuffle</button>
-      {cards}
+      <div key={uniqid()} onClick={handleAction}>
+        <p>{cards[0].name}</p>
+        <p>{cards[0].pic}</p>
+      </div>
+      <div key={uniqid()} onClick={handleAction}>
+        <p>{cards[1].name}</p>
+        <p>{cards[1].pic}</p>
+      </div>
+      <div key={uniqid()} onClick={handleAction}>
+        <p>{cards[2].name}</p>
+        <p>{cards[2].pic}</p>
+      </div>
+      <div key={uniqid()} onClick={handleAction}>
+        <p>{cards[3].name}</p>
+        <p>{cards[3].pic}</p>
+      </div>
+      <div key={uniqid()} onClick={handleAction}>
+        <p>{cards[4].name}</p>
+        <p>{cards[4].pic}</p>
+      </div>
     </>
   );
   
