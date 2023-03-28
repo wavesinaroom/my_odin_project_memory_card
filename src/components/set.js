@@ -3,11 +3,11 @@ import uniqid from "uniqid";
 
 export default function Set(props){
 
-  const [cards,setCards] = useState([{name:`Joe`, pic:`1`},
-                            {name:`Luke`, pic:`2`},
-                            {name:`Bob`, pic:`3`},
-                            {name:`James`,pic:`4`},
-                            {name:`Lou`,pic:`5`}
+  const [cards,setCards] = useState([{name:`1`, pic:`https://images.pexels.com/photos/1132047/pexels-photo-1132047.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`},
+                            {name:`2`, pic:`https://images.pexels.com/photos/1128678/pexels-photo-1128678.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`},
+                            {name:`3`, pic:`https://images.pexels.com/photos/1092730/pexels-photo-1092730.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`},
+                            {name:`4`,pic:`https://images.pexels.com/photos/1171170/pexels-photo-1171170.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`},
+                            {name:`5`,pic:`https://images.pexels.com/photos/4838747/pexels-photo-4838747.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`}
   ]);
 
   function handleAction(name){
@@ -16,11 +16,11 @@ export default function Set(props){
   }
 
   function shuffle(){
-    const shuffled = Array(5);
+    const shuffled = Array(cards.length);
     let random;
     cards.forEach(card=>{
       while(true){
-        random = Math.floor(Math.random()*5);
+        random = Math.floor(Math.random()*cards.length);
         if(!shuffled[random]){
           shuffled[random] = card;
           break;
@@ -32,24 +32,15 @@ export default function Set(props){
   return(
     <>
       <div key={uniqid()} onClick={()=>{handleAction(cards[0])}}>
-        <p>{cards[0].name}</p>
-        <p>{cards[0].pic}</p>
+        <img src={cards[0].pic}/>
       </div>
       <div key={uniqid()} onClick={()=>{handleAction(cards[1])}}>
-        <p>{cards[1].name}</p>
-        <p>{cards[1].pic}</p>
       </div>
       <div key={uniqid()} onClick={()=>{handleAction(cards[2])}}>
-        <p>{cards[2].name}</p>
-        <p>{cards[2].pic}</p>
       </div>
       <div key={uniqid()} onClick={()=>{handleAction(cards[3])}}>
-        <p>{cards[3].name}</p>
-        <p>{cards[3].pic}</p>
       </div>
       <div key={uniqid()} onClick={()=>{handleAction(cards[4])}}>
-        <p>{cards[4].name}</p>
-        <p>{cards[4].pic}</p>
       </div>
     </>
   );
