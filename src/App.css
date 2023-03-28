@@ -1,5 +1,6 @@
-*{
+body{
   font-family:Verdana, Geneva, Tahoma, sans-serif ;
+  background-color: #5A3563;
   outline-style: solid;
   outline-width: 1px;
   outline-color: red;
@@ -20,7 +21,7 @@ img{
   position: absolute;
   top:20%;
   left: 15%;
-  background-color: orange;
+  background-color: #FFEAC7;
   display: flex;
   flex-direction: column;
 }
@@ -33,7 +34,6 @@ img{
 }
 
 .set{
-  background-color: yellow;
   padding-top: 5em;
   padding-bottom: 5em;
   display: flex;
