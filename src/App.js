@@ -4,8 +4,7 @@ import Score from './components/score';
 import {useState} from 'react';
 
 function App() {
-  let clicked = []
-  const [string, setString] = useState('');
+  const [clicked, setClicked] = useState([]);
   const [current, setCurrent] = useState(0); 
   const [best, setBest] = useState(0); 
 
@@ -35,10 +34,9 @@ function App() {
       else{
         //Update clicked - Check best - increase current
         increase();
-        clicked = [...clicked, card.name];    
+        setClicked([...clicked,card.name]);
       }
     }
-    console.log(clicked);
   }
   return (
     <>
