@@ -34,10 +34,11 @@ function App() {
   },[current,best])
 
   return (
-    <>
+    <div className='main'>
+      <h1>...Just try not to click on the same pic twice</h1>
       <Score current={current} best={best}/>
       <Set action={checkClicked}/>
-    </>
+    </div>
   );
 }
 
