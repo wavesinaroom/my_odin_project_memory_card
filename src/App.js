@@ -17,26 +17,26 @@ function App() {
       setBest(current);
   }
 
-  function reset(){
-    setBest(0);
-    setCurrent(0);
-  }
 
   function checkClicked(card){
-    if(clicked[4]){
-
+    if(clicked.length===4){
+      setClicked([card.name]);
+      setBest(0);
+      setCurrent(0);
       //Reset clicked - current score - best score
     }else{
       if(clicked.find(click => click === card.name)){
         //Reset current score
-        alert('Found')
+        setCurrent(0);
       }
       else{
         //Update clicked - Check best - increase current
+        setClicked([...clicked,card.name])
         increase();
-        setClicked([...clicked,card.name]);
+        updateBest();
       }
     }
+    console.log(clicked);
   }
   return (
     <>
