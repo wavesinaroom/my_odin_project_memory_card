@@ -16,6 +16,10 @@ img{
 }
 
 .main{
+  border-radius: 0.5em;
+  position: absolute;
+  top:20%;
+  left: 15%;
   background-color: orange;
   display: flex;
   flex-direction: column;
