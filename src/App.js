@@ -1,7 +1,7 @@
 import './App.css';
 import Set from './components/set';
 import Score from './components/score';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 
 function App() {
   const [clicked, setClicked] = useState([]);
@@ -11,13 +11,6 @@ function App() {
   function increase(){
     setCurrent(current+1);
   }
-
-  function updateBest(){
-    console.log(current)
-    if(current>best)
-      setBest(current);
-  }
-
 
   function checkClicked(card){
     if(clicked.length===5){
@@ -32,10 +25,13 @@ function App() {
       else{
         setClicked([...clicked,card.name])
         increase();
-        updateBest();
       }
     }
   }
+  useEffect(()=>{
+    if(current>best)
+      setBest(current);
+  },[current,best])
 
   return (
     <>
