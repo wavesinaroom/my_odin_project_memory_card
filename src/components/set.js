@@ -31,23 +31,23 @@ export default function Set(props){
   }
   return(
     <>
-      <div key={uniqid()} onClick={handleAction}>
+      <div key={uniqid()} onClick={()=>{handleAction(cards[0])}}>
         <p>{cards[0].name}</p>
         <p>{cards[0].pic}</p>
       </div>
-      <div key={uniqid()} onClick={handleAction}>
+      <div key={uniqid()} onClick={()=>{handleAction(cards[1])}}>
         <p>{cards[1].name}</p>
         <p>{cards[1].pic}</p>
       </div>
-      <div key={uniqid()} onClick={handleAction}>
+      <div key={uniqid()} onClick={()=>{handleAction(cards[2])}}>
         <p>{cards[2].name}</p>
         <p>{cards[2].pic}</p>
       </div>
-      <div key={uniqid()} onClick={handleAction}>
+      <div key={uniqid()} onClick={()=>{handleAction(cards[3])}}>
         <p>{cards[3].name}</p>
         <p>{cards[3].pic}</p>
       </div>
-      <div key={uniqid()} onClick={handleAction}>
+      <div key={uniqid()} onClick={()=>{handleAction(cards[4])}}>
         <p>{cards[4].name}</p>
         <p>{cards[4].pic}</p>
       </div>

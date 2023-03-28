@@ -23,24 +23,22 @@ function App() {
     setCurrent(0);
   }
 
-  function checkClicked(name){
-    alert(`Calling ${name} from app.js`)
+  function checkClicked(card){
     if(clicked[4]){
 
       //Reset clicked - current score - best score
     }else{
-      if(clicked.find(click => click === name)){
+      if(clicked.find(click => click === card.name)){
         //Reset current score
         alert('Found')
       }
       else{
         //Update clicked - Check best - increase current
         increase();
-        setString('laksjdf')
-        clicked.push(name)    
+        clicked = [...clicked, card.name];    
       }
     }
-    alert(string);
+    console.log(clicked);
   }
   return (
     <>
