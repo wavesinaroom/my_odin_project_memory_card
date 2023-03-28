@@ -13,31 +13,30 @@ function App() {
   }
 
   function updateBest(){
+    console.log(current)
     if(current>best)
       setBest(current);
   }
 
 
   function checkClicked(card){
-    if(clicked.length===4){
+    if(clicked.length===5){
       setClicked([card.name]);
       setBest(0);
       setCurrent(0);
-      //Reset clicked - current score - best score
     }else{
       if(clicked.find(click => click === card.name)){
-        //Reset current score
+        setClicked([card.name])
         setCurrent(0);
       }
       else{
-        //Update clicked - Check best - increase current
         setClicked([...clicked,card.name])
         increase();
         updateBest();
       }
     }
-    console.log(clicked);
   }
+
   return (
     <>
       <Score current={current} best={best}/>
