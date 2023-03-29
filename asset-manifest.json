@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/my_odin_project_memory_card/static/css/main.11a5a793.css",
+    "main.js": "/my_odin_project_memory_card/static/js/main.5380bb46.js",
+    "static/js/787.d6a8b40f.chunk.js": "/my_odin_project_memory_card/static/js/787.d6a8b40f.chunk.js",
+    "index.html": "/my_odin_project_memory_card/index.html",
+    "main.11a5a793.css.map": "/my_odin_project_memory_card/static/css/main.11a5a793.css.map",
+    "main.5380bb46.js.map": "/my_odin_project_memory_card/static/js/main.5380bb46.js.map",
+    "787.d6a8b40f.chunk.js.map": "/my_odin_project_memory_card/static/js/787.d6a8b40f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.11a5a793.css",
+    "static/js/main.5380bb46.js"
+  ]
+}
